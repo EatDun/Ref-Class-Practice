@@ -1,0 +1,53 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+class Refrigerant {
+    
+    String name;
+    int id;
+    double maxPress;
+    double maxTemp;
+    double satRLo;
+    double satRHi;
+    double a;
+    double b;
+    double c;
+    double d;
+    double e;
+    double f;
+
+    public Refrigerant(String refName, int refId, double refMaxPress, double refMaxTemp, double refSatRLo, double refSatRHi, double refA, double refB, double refC, double refD, double refE, double refF) {
+        name = refName;
+        id = refId;
+        maxPress = refMaxPress;
+        maxTemp = refMaxTemp;
+        satRLo = refSatRLo;
+        satRHi = refSatRHi;
+        a = refA;
+        b = refB;
+        c = refC;
+        d = refD;
+        e = refE;
+        f = refF;
+    }
+    
+    public String toString() {
+        return "Refrigerant{" +
+               "name='" + name + '\'' +
+               ", id=" + id +
+               ", maxPress=" + maxPress +
+               ", maxTemp=" + maxTemp +
+               ", satRLo=" + satRLo +
+               ", satRHi=" + satRHi +
+               '}';
+    }
+}
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        Refrigerant r22 = new Refrigerant("R-22", 1, 707.21, 204.81, 418.3339585682146, 664.5086257144121, 29.35754453, 3845.193152, 7.86103122, 0.002190939044, 305.8268131, 686.1);
+        System.out.println(r22);
+    }
+}
